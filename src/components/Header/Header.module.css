@@ -1,0 +1,14 @@
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:25vh;
+}
+.headerAltText{
+    font-weight: 700;
+    color:#484848;
+    font-size:14px;
+    margin-left: 15rem;
+    margin-top: 10px;
+}

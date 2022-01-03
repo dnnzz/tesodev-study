@@ -1,0 +1,23 @@
+.searchBarWrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+}
+.searchBarInput{
+    width:709px;
+    height:46px;
+    border-radius: 8px;
+    border:1px solid #000;
+}
+.searchButton{
+    background-color: #204080;
+    color:white;
+    margin-left:16px;
+    height:46px;
+    width:138px;
+    border-radius: 8px;
+    border:none;
+    font-size: 18px;
+    line-height: 21.09px;
+    font-weight: 700;
+}
