@@ -1,0 +1,15 @@
+.pageListWrapper{
+    padding: 102px 407px 112px 212px;
+    margin-right:50px;
+}
+.orderSection{
+    float:right;
+    margin-top:-20px;
+    margin-right: 50px;
+}
+.btn{
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+}

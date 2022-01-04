@@ -30,3 +30,6 @@
     line-height: 21.09px;
     font-weight: 700;
 }
+.searchButton:hover{
+    background-color:#4F75C2;
+}

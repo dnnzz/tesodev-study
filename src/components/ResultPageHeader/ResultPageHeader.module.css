@@ -8,12 +8,11 @@
 }
 .resultPageInput{
     height: 46px;
-    width: 56.938%;
+    width: 509px;
     margin-left: 35px;
     margin-top:15px;
     border-radius: 8px;
     border:1px solid #000;
-    text-align: center;
     color:#888888;
     font-weight: bold;
     font-size: 18px;
@@ -35,4 +34,7 @@
     font-size: 18px;
     line-height: 21.09px;
     font-weight: 700;
+}
+.resultPageBtn:hover{
+    background-color:#4F75C2;
 }
