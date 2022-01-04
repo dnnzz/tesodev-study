@@ -9,6 +9,10 @@
     border-radius: 8px;
     border:1px solid #000;
 }
+.searchBarInput:hover{
+    background:rgba(100, 100, 100, 0.08);
+    border:2px solid rgba(0, 0, 0, 0.6);
+}
 .searchButton{
     background-color: #204080;
     color:white;
