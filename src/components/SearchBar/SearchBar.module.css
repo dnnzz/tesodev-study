@@ -8,10 +8,15 @@
     height:46px;
     border-radius: 8px;
     border:1px solid #000;
+    text-align: center;
+    color:#888888;
+    font-weight: bold;
+    font-size: 18px;
 }
 .searchBarInput:hover{
     background:rgba(100, 100, 100, 0.08);
     border:2px solid rgba(0, 0, 0, 0.6);
+    color:rgba(100, 100, 100, 0.5);
 }
 .searchButton{
     background-color: #204080;

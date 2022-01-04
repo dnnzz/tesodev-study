@@ -4,8 +4,23 @@
 }
 .userListInner{
     border:1px solid rgba(72, 72, 72, 1);
+    border-radius: 4px;
     margin: auto;
     text-align: initial;
     height:258px;
     width: 709px;
+}
+.btn{
+    background-color: #fff;
+    border: none;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+.showMore{
+    text-align: center;
+    padding:42.49px 0px 9px;
 }

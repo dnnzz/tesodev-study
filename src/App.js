@@ -1,15 +1,17 @@
 import './App.css';
-import Header from './components/Header/Header';
-import SearchBar from './components/SearchBar/SearchBar';
-import UserList from './components/UserList/UserList';
-
+import Landing from "./pages/Landing"
+import ListPage from './pages/ListPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <SearchBar />
-      <UserList />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<Landing/>}/>
+          <Route path="/list" element={<ListPage/>}/>
+        </Routes>      
+      </div>
+    </Router>
   );
 }
 
