@@ -6,7 +6,7 @@ export const UsersReducer = (state, action) => {
         let filtered = filterUsers(state.users,"Turkey");
         return {
           ...state,
-          filteredUsers:filtered
+          filteredUsers:[filtered]
         };
       default:
         return state;
