@@ -2,9 +2,7 @@ import { createContext, useContext, useReducer } from "react";
 import { UsersReducer } from "../reducers/UsersReducer";
 
 export const UserContext = createContext();
-const users = JSON.parse(localStorage.getItem("persons"));
 export const initialState = {
-  users: users.data,
   filteredUsers:[]
 };
 export const Context = ({
