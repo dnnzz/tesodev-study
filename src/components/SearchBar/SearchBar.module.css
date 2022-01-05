@@ -33,3 +33,8 @@
 .searchButton:hover{
     background-color:#4F75C2;
 }
+@media only screen and (max-width: 768px) {
+    .searchBarInput{
+        width: 100%;
+    }
+  }
