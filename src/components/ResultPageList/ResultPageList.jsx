@@ -35,7 +35,7 @@ export default function ResultPageList() {
                 i.slice(indexOfFirstUser, indexOfLastUser).map(
                     (user)=>
                     <ListItem 
-                    key={`${index}-${user[0]}`} 
+                    key={user[0]} 
                     name={user[0]}
                     email={user[2]}
                     date={user[3]}

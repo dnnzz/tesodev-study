@@ -12,6 +12,16 @@
     width: 24px;
     font-weight: bold;
 }
+.activeBtn{
+    margin-left:10.29px;
+    border:1px solid #484848;
+    border-radius: 4px;
+    height: 24px;
+    width: 24px;
+    font-weight: bold;
+    background-color: #204080;
+    color:white;
+}
 .buttons:hover{
     background-color: #204080;
     color:white;

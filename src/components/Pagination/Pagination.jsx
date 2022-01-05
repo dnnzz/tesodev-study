@@ -20,7 +20,8 @@ export default function Pagination({userPerPage,paginate,allUsers}) {
                   return;
                 }
               }}
-            className={styles.previous}>Previous</button>
+            className={styles.previous}
+            disabled={currentNumber === 1}>Previous</button>
             {
                 pageNumbers.map((num) =>(
                     <button 
@@ -29,7 +30,7 @@ export default function Pagination({userPerPage,paginate,allUsers}) {
                         setCurrentNumber(num);
                         paginate(num);
                       }}
-                    className={styles.buttons}>{num}</button>
+                    className={currentNumber === num ? styles.activeBtn : styles.buttons}>{num}</button>
                 ))
             }
             <button 
@@ -39,7 +40,8 @@ export default function Pagination({userPerPage,paginate,allUsers}) {
                   paginate(currentNumber + 1);
                 }
               }}
-            className={styles.next}>Next</button>         
+            className={styles.next}
+            disabled={currentNumber === pageNumbers.length}>Next</button>         
         </div>
     )
 }

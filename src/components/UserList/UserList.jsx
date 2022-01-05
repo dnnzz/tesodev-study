@@ -15,7 +15,7 @@ export default function UserList() {
                     i.slice(0,3).map(
                         (user)=>
                         <ListItem 
-                        key={index} 
+                        key={user[0]} 
                         name={user[0]}
                         email={user[2]}
                         date={user[3]}
