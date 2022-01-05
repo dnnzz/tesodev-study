@@ -6,16 +6,20 @@ import icon from '../../assets/icon.png';
 import { useUserContext } from '../../context/Context';
 export default function ResultPageList() {
     const {
-        state
+        state,
+        dispatch
     } = useUserContext();
     const [openMenu,setMenu] = React.useState(false);
     const [currentPage, setCurrentPage] = React.useState(1);
-
     const indexOfLastUser = currentPage * 6;
     const indexOfFirstUser = indexOfLastUser - 6;
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
       };
+    const orderBy = (option) => {
+        dispatch({ type: "SORT_USERS", payload: option });
+        setMenu(false);
+    }
     return (
         <div className={styles.pageListWrapper}>
             <div className={styles.orderSection}>
@@ -23,10 +27,18 @@ export default function ResultPageList() {
                 <button onMouseOver={() => setMenu(true)} className={styles.btn}>Order By</button>
                 {openMenu && 
                 <div onMouseLeave={() => setMenu(false)} className={styles.orders}>
-                    <button>Name ascending</button>
-                    <button>Name descending</button>
-                    <button>Year ascending</button>
-                    <button>Year descending</button>
+                    <button
+                    value="name_asc"
+                    onClick={(e) => orderBy(e.target.value)}>Name ascending</button>
+                    <button
+                    value="name_desc"
+                    onClick={(e) => orderBy(e.target.value)}>Name descending</button>
+                    <button
+                    value="year_asc"
+                    onClick={(e) => orderBy(e.target.value)}>Year ascending</button>
+                    <button
+                    value="year_desc"
+                    onClick={(e) => orderBy(e.target.value)}>Year descending</button>
                 </div>
                 }
             </div>
