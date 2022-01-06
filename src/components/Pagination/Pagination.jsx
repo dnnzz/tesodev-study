@@ -24,7 +24,8 @@ export default function Pagination({userPerPage,paginate,allUsers}) {
             disabled={currentNumber === 1}>Previous</button>
             {
                 pageNumbers.map((num) =>(
-                    <button 
+                    <button
+                    id={`btn-${num}`}
                     key={num}
                     onClick={() => {
                         setCurrentNumber(num);
@@ -33,7 +34,8 @@ export default function Pagination({userPerPage,paginate,allUsers}) {
                     className={currentNumber === num ? styles.activeBtn : styles.buttons}>{num}</button>
                 ))
             }
-            <button 
+            <button
+            id="next"
              onClick={() => {
                 if (currentNumber < pageNumbers.length) {
                   setCurrentNumber(currentNumber + 1);
