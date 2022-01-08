@@ -8,7 +8,7 @@ export default function ResultPageHeader() {
     return (
         <div className={styles.header}>
         <img src={logo} className={styles.logo} alt="tesodev-logo" /> 
-        <input className={styles.resultPageInput} 
+        <input data-testid="result-input" className={styles.resultPageInput} 
         onChange={(e) => setQuery(e.target.value)}
         type="text" />
         <button
