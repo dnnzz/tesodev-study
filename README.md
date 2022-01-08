@@ -62,3 +62,11 @@ npm test
 ```
 npm run coverage
 ```
+
+<br/>
+
+## Lighthouse report
+![lighthouse report](https://i.ibb.co/s6hgQdS/Ekran-Resmi-2022-01-08-17-01-38.png)
+
+## Coverage report
+![coverage report](https://i.ibb.co/syzNRKD/Ekran-Resmi-2022-01-08-17-00-01.png)
