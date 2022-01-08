@@ -1,16 +1,16 @@
 import { createContext, useContext, useReducer } from "react";
 import { UsersReducer } from "../reducers/UsersReducer";
 
-export const UserContext = createContext();
-export const initialState = {
+const initialState = {
   filteredUsers:[]
 };
-export const Context = ({
+export const UserContext = createContext(null);
+const Context = ({
   children,
 }) => {
   const [state, dispatch] = useReducer(UsersReducer, initialState);
   return (
-    <UserContext.Provider value={{ state, dispatch}}>
+    <UserContext.Provider value={{state, dispatch}}>
       {children}
     </UserContext.Provider>
   );
