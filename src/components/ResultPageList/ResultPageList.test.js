@@ -67,4 +67,30 @@ describe('ResultPageList tests',() => {
         expect(listItem.country).toEqual("Turkey");
         expect(listItem.state).toEqual("San José");
     })
+    test('checks orderBy section rendered correctly',() => {
+        const wrapper = mount(
+            <UserContext.Provider value={mockContext}>
+            <ResultPageList />
+            </UserContext.Provider>);
+        const button = wrapper.find('button.btn');
+        expect(button).toHaveLength(1);
+        button.simulate('mouseover');
+        expect(wrapper.find('div.orders')).toHaveLength(1);
+        const nameAscButton = wrapper.find('button[value="name_asc"]');
+        const nameDescButton = wrapper.find('button[value="name_desc"]');
+        const yearAscButton =wrapper.find('button[value="year_asc"]');
+        const yearDescButton = wrapper.find('button[value="year_desc"]')
+        expect(nameAscButton).toHaveLength(1);
+        nameAscButton.simulate('click');
+        expect(mockContext.dispatch).toHaveBeenCalledWith({ type: "SORT_USERS", payload: 'name_asc'});
+        expect(nameDescButton).toHaveLength(1);
+        nameDescButton.simulate('click');
+        expect(mockContext.dispatch).toHaveBeenCalledWith({ type: "SORT_USERS", payload: 'name_desc'});
+        expect(yearAscButton).toHaveLength(1);
+        yearAscButton.simulate('click');
+        expect(mockContext.dispatch).toHaveBeenCalledWith({ type: "SORT_USERS", payload: 'year_asc'});
+        expect(yearDescButton).toHaveLength(1);
+        yearDescButton.simulate('click');
+        expect(mockContext.dispatch).toHaveBeenCalledWith({ type: "SORT_USERS", payload: 'year_desc'});
+    })
 })
